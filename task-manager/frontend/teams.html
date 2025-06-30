@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Teams - Task Manager</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <div class="dashboard-container">
+        <header>
+            <h1>Task Manager</h1>
+            <nav>
+                <a href="dashboard.html">Dashboard</a>
+                <a href="teams.html" class="active">Teams</a>
+                <a href="tasks.html">Tasks</a>
+                <button id="logoutBtn" class="btn btn-secondary">Logout</button>
+            </nav>
+        </header>
+        <main>
+            <section class="teams-section">
+                <div class="section-header">
+                    <h2>Your Teams</h2>
+                    <button id="createTeamBtn" class="btn btn-primary">Create Team</button>
+                </div>
+                
+                <div class="modal" id="createTeamModal">
+                    <div class="modal-content">
+                        <span class="close">&times;</span>
+                        <h3>Create New Team</h3>
+                        <form id="createTeamForm">
+                            <div class="form-group">
+                                <label for="teamName">Team Name</label>
+                                <input type="text" id="teamName" name="teamName" required>
+                            </div>
+                            <button type="submit" class="btn btn-primary">Create</button>
+                        </form>
+                    </div>
+                </div>
+                
+                <div class="teams-list" id="teamsList">
+                    <!-- Teams will be loaded here -->
+                </div>
+            </section>
+        </main>
+    </div>
+    <script src="js/logout.js"></script>
+    <script src="js/teams.js"></script>
+</body>
+</html>
